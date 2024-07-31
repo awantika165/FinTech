@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Fintech/hacky/Monances/pages/sip.css" />
+  <title>SIP Calculator</title>
+    
+
+
+  <script src="https://use.fontawesome.com/e7b5815694.js"></script>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h1>Returns Estimator</h1><hr><br>
+        <p>Estimation is based on the past performance</p> 
+        
+        <div class="input-group">
+            <label for="amount">ENTER AMOUNT</label>
+            <input type="number" id="amount" value="5000">
+        </div>
+        
+        <div class="input-group">
+            <label for="duration">Select Duration</label>
+            <input type="range" id="duration" min="1" max="30" value="5">
+            <span id="duration-value">5 Yrs</span>
+        </div>
+        
+        <div class="input-group">
+            <label for="rate">Expected Rate of Return</label>
+            <input type="range" id="rate" min="8" max="30" value="12">
+            <span id="rate-value">12%</span>
+        </div>
+        
+        <div class="results">
+            <h2>The total value of your investment after <span id="result-duration">5</span> Years will be</h2>
+            <h3 id="total-value">₹ 4,12,432</h3>
+            
+            <div class="chart-container">
+                <canvas id="pie-chart"></canvas>
+            </div>
+            
+            <div class="result-breakdown">
+                <div class="invested">
+                    <span class="color-box"></span>
+                    <span>Invested Amount</span>
+                    <span id="invested-amount">₹ 3,00,000</span>
+                </div>
+                <div class="returns">
+                    <span class="color-box"></span>
+                    <span>Est. Returns</span>
+                    <span id="est-returns">₹ 1,12,432</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/Fintech/hacky/Monances/pages/sip.js"></script>
+</body>
+</html>
