@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Investment Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="/hacky/Monances/images/logo.svg" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js library -->
+</head>
+<body>
+    <header>
+        <div class="switch-container">
+            
+            <label class="switch">
+                
+                <input type="checkbox" class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <span class="slider"></span>
+            </label>
+            <span class="dark-mode-label">Dark Mode</span>
+        </div>
+        <div id="google_translate_element" style="position: fixed; top: 80px; right: 90px;"></div>
+
+                            <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                             new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'hi,gu,kn,ml,mr,ta,te,bn,pa,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                            </script>
+                            <style>
+                                #google_translate_element {
+                                    zoom: 0.7; /* Increase this value to make the widget larger */
+                                    
+                                    transform: scale(1.5); /* Standard property */
+                                    transform-origin: 0 0;
+                                }
+                                
+                                body {
+                                    top: 0px !important;
+                                }
+                            </style>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+        <h1>My Investment Portfolio</h1>
+        
+    </header>
+
+    <div class="container">
+        <div class="money-divider">
+            <div id="stock-market" class="investment-section">
+                <h2>Stock Market</h2>
+                <!-- Display stock market information here -->
+                <p id="stock-market-amount">&#8377;10,000</p> <!-- Example initial amount -->
+                <input type="number" id="stock-market-input" placeholder="Enter new amount">
+                <button onclick="updateStockMarket()">Update</button>
+            </div>
+            <div id="fd-saving" class="investment-section">
+                <h2>FD / Savings</h2>
+                <!-- Display FD/Savings information here -->
+                <p id="fd-saving-amount">&#8377;8,000</p> <!-- Example initial amount -->
+                <input type="number" id="fd-saving-input" placeholder="Enter new amount">
+                <button onclick="updateFdSaving()">Update</button>
+            </div>
+            <div id="mutual-fund-sip" class="investment-section">
+                <h2>Mutual Fund</h2>
+                <!-- Display Mutual Fund/SIP information here -->
+                <p id="mutual-fund-sip-amount">&#8377;12,000</p> <!-- Example initial amount -->
+                <input type="number" id="mutual-fund-sip-input" placeholder="Enter new amount">
+                <button onclick="updateMutualFundSip()">Update</button>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="investment-chart"></canvas>
+        </div>
+
+        <div class="text-space">
+            <h2>Total Investment</h2>
+            <p id="total-investment">&#8377;30,000</p> <!-- Example initial total amount -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><a href="/iste/landingpage.html#target-section" class="scroll-button">Contact</a>: support@technoes.com</p>
+            <p>Phone: +91 7404655110</p>
+            
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
